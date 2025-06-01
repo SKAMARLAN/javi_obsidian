@@ -11,14 +11,14 @@
             "id": "7c11fd30492fc1d0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "APUNTES RECUPERACIÓN.md",
-                "mode": "source",
-                "source": false
+                "aFile": "PROYECTOS JAVI/APUNTES RECUPERACIÓN.md",
+                "bFile": "PROYECTOS JAVI/APUNTES RECUPERACIÓN.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "APUNTES RECUPERACIÓN"
+              "icon": "diff",
+              "title": "Diff: APUNTES RECUPERACIÓN"
             }
           }
         ]
@@ -85,74 +85,11 @@
     "type": "split",
     "children": [
       {
-        "id": "046469027f7fc999",
+        "id": "fd67faa1f9fb0148",
         "type": "tabs",
         "children": [
           {
-            "id": "f233e5eab74c2a48",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "APUNTES RECUPERACIÓN.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Enlaces entrantes de APUNTES RECUPERACIÓN"
-            }
-          },
-          {
-            "id": "6f45bd6dddf9466a",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "APUNTES RECUPERACIÓN.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Enlaces salientes de APUNTES RECUPERACIÓN"
-            }
-          },
-          {
-            "id": "654bb1adb2362e66",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "Etiquetas"
-            }
-          },
-          {
-            "id": "e3cf7ff007264d0f",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "APUNTES RECUPERACIÓN.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Esquema de APUNTES RECUPERACIÓN"
-            }
-          },
-          {
-            "id": "bc29750d835a2771",
+            "id": "5205e1f330b8d715",
             "type": "leaf",
             "state": {
               "type": "github-issue-controls-view",
@@ -160,9 +97,19 @@
               "icon": "github",
               "title": "Github Issue Controls"
             }
+          },
+          {
+            "id": "5dc08dba73a17f5d",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -177,12 +124,13 @@
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "yet-another-obsidian-synchronizer:YAOS": false,
-      "githobs:Manage a github issue": false
+      "githobs:Manage a github issue": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "654bb1adb2362e66",
+  "active": "7c11fd30492fc1d0",
   "lastOpenFiles": [
-    "Bienvenido.md",
-    "APUNTES RECUPERACIÓN.md"
+    "APUNTES RECUPERACIÓN.md",
+    "Bienvenido.md"
   ]
 }

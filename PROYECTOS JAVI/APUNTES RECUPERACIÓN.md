@@ -1,6 +1,3 @@
----
-github_issue: 1
----
 # Netplan o Interfaces (Ubuntu o Desktop)
 ## Netplan
 ```bash
