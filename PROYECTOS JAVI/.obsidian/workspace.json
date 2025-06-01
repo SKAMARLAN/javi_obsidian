@@ -150,13 +150,23 @@
               "icon": "lucide-list",
               "title": "Esquema de APUNTES RECUPERACIÓN"
             }
+          },
+          {
+            "id": "bc29750d835a2771",
+            "type": "leaf",
+            "state": {
+              "type": "github-issue-controls-view",
+              "state": {},
+              "icon": "github",
+              "title": "Github Issue Controls"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,12 +175,14 @@
       "canvas:Crear nuevo lienzo": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false
+      "command-palette:Abrir paleta de comandos": false,
+      "yet-another-obsidian-synchronizer:YAOS": false,
+      "githobs:Manage a github issue": false
     }
   },
-  "active": "7c11fd30492fc1d0",
+  "active": "654bb1adb2362e66",
   "lastOpenFiles": [
-    "APUNTES RECUPERACIÓN.md",
-    "Bienvenido.md"
+    "Bienvenido.md",
+    "APUNTES RECUPERACIÓN.md"
   ]
 }
