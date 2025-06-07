@@ -556,7 +556,10 @@ tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
     CustomLog /var/log/apache2/www.alma.cat-access_log combined
     ErrorLog /var/log/apache2/www.alma.cat-error_log
     RewriteEngine on
-    RewriteRule ^/login/
+    RewriteRule ^/login/index.php$ /validacio/index.php
 </VirtualHost>
 EOF
+
+mkdir /var/www/www/validacio
+echo "<?php echo 'Benvingut a la WEB de l\'empresa' (VALIDACIO); ?>" | sudo tee /var/www/www/validacio/index.php
 ```
