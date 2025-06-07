@@ -548,7 +548,7 @@ systemctl restart apache2
 ```
 
 
-## Substituir
+## Substituir dirección
 ```bash
 tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
@@ -564,4 +564,22 @@ EOF
 
 mkdir /var/www/www/validacio
 echo "<?php echo 'Benvingut a la WEB de l\'empresa VALIDACIO'; ?>" | sudo tee /var/www/www/validacio/index.php
+```
+![[Pasted image 20250607180358.png]]
+
+## Dia de la semana
+```bash
+tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
+<VirtualHost *:80>
+    ServerName www.alma.cat
+    ServerAdmin admin@alma.cat
+    DocumentRoot /var/www/www
+    CustomLog /var/log/apache2/www.alma.cat-access_log combined
+    ErrorLog /var/log/apache2/www.alma.cat-error_log
+    RewriteEngine on
+    RewriteCond %{TIME_DAY} ^5$
+    RewriteRule ^/index.php$ /divendres.php
+</VirtualHost>
+EOF
+echo "<?php echo 'Benvingut a la WEB de l\'empresa VALIDACIO'; ?>" | sudo tee /var/www/www/divendres.php
 ```
