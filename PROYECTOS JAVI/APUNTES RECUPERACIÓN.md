@@ -610,24 +610,27 @@ EOF
 
 ## Multiples opciones con variables
 ```bash
-mkdir -p /var/www/admin/planell
-echo "<?php echo 'Benvingut a la WEB de l\'empresa DEFAULT'; ?>" | sudo tee /var/www/admin/planell/default.php
-
-tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
+tee /etc/apache2/sites-available/vendes.alma.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
-    ServerName admin.alma.cat
+    ServerName vendes.alma.cat
     ServerAdmin admin@alma.cat
-    DocumentRoot /var/www/admin
-    CustomLog /var/log/apache2/admin.alma.cat-access_log combined
-    ErrorLog /var/log/apache2/admin.alma.cat-error_log
-    #Redirigir solo contenido manteniendo URL
-    #RewriteEngine On
-    #RewriteRule ^/planelldecontrol/?$ /planell/default.php
-    #Redirigir URL
-    Redirect /planelldecontrol /planell/default.php
+    DocumentRoot /var/www/vendes
+    CustomLog /var/log/apache2/vendes.alma.cat-access_log combined
+    ErrorLog /var/log/apache2/vendes.alma.cat-error_log
+    RewriteEngine on
+    RewriteRule ^/(BMW|AUDI|MERCEDES)/(HIBRIDO|GASOLINA|ELECTRICO)/(ECONOMICO|PREMIUM)/?$ /index.php?marca=$1&combustible=$2&precio=$3
 
 </VirtualHost>
 EOF
 ```
-RewriteEngine on
-RewriteRule ^/(BMW|AUDI|MERCEDES)/(HIBRIDO|GASOLINA|ELECTRICO)/(ECONOMICO|PREMIUM)/?$ /index.php?marca=$1&combustible=$2&precio=$3
+
+
+```bash
+sudo tee /var/www/vendes/index.php > /dev/null <<EOF
+<?php
+echo 'Marca: ' . (\$_GET['marca'] ?? '') . '<br>';
+echo 'Combustible: ' . (\$_GET['combustible'] ?? '') . '<br>';
+echo 'Preu: ' . (\$_GET['precio'] ?? '');
+?>
+EOF
+```
