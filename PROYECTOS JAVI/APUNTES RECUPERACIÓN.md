@@ -227,15 +227,15 @@ systemctl restart apache2
 ```
 
 ```bash
-sudo mkdir -p /var/www/vendes.alma.cat
-sudo mkdir -p /var/www/www.alma.cat
-sudo mkdir -p /var/www/admin.alma.cat
+sudo mkdir -p /var/www/vendes
+sudo mkdir -p /var/www/www
+sudo mkdir -p /var/www/admin
 ```
 
 ```bash
-echo "<?php echo 'Benvingut a la web de VENDES'; ?>" | sudo tee /var/www/vendes.alma.cat/index.php
-echo "<?php echo 'Benvingut a la WEB de l\'empresa'; ?>" | sudo tee /var/www/www.alma.cat/index.php
-echo "<?php echo 'Benvingut a la zona ADMIN'; ?>" | sudo tee /var/www/admin.alma.cat/index.php
+echo "<?php echo 'Benvingut a la web de VENDES'; ?>" | sudo tee /var/www/vendes/index.php
+echo "<?php echo 'Benvingut a la WEB de l\'empresa'; ?>" | sudo tee /var/www/www/index.php
+echo "<?php echo 'Benvingut a la zona ADMIN'; ?>" | sudo tee /var/www/admin/index.php
 ```
 
 ```bash
@@ -243,7 +243,7 @@ tee /etc/apache2/sites-available/vendes.alma.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
     ServerName vendes.alma.cat
     ServerAdmin admin@alma.cat
-    DocumentRoot /var/www/vendes.alma.cat
+    DocumentRoot /var/www/vendes
     CustomLog /var/log/apache2/vendes.alma.cat-access_log combined
     ErrorLog /var/log/apache2/vendes.alma.cat-error_log
 </VirtualHost>
@@ -255,7 +255,7 @@ tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
     ServerName www.alma.cat
     ServerAdmin admin@alma.cat
-    DocumentRoot /var/www/www.alma.cat
+    DocumentRoot /var/www/www
     CustomLog /var/log/apache2/www.alma.cat-access_log combined
     ErrorLog /var/log/apache2/www.alma.cat-error_log
 </VirtualHost>
@@ -267,7 +267,7 @@ tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
     ServerName admin.alma.cat
     ServerAdmin admin@alma.cat
-    DocumentRoot /var/www/admin.alma.cat
+    DocumentRoot /var/www/admin
     CustomLog /var/log/apache2/admin.alma.cat-access_log combined
     ErrorLog /var/log/apache2/admin.alma.cat-error_log
 </VirtualHost>
