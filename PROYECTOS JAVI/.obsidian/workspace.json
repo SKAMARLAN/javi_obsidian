@@ -11,10 +11,14 @@
             "id": "b9d894a73903d476",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "APUNTES RECUPERACIÓN.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "APUNTES RECUPERACIÓN"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 297.5
   },
   "right": {
     "id": "60b0e56db21624da",
@@ -110,6 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "APUNTES RECUPERACIÓN.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Enlaces entrantes de APUNTES RECUPERACIÓN"
             }
           },
           {
@@ -128,11 +133,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "APUNTES RECUPERACIÓN.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes"
+              "title": "Enlaces salientes de APUNTES RECUPERACIÓN"
             }
           },
           {
@@ -156,12 +162,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "APUNTES RECUPERACIÓN.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Esquema de APUNTES RECUPERACIÓN"
             }
           }
         ],
@@ -184,10 +191,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "53e32d79bd716bf3",
+  "active": "b9d894a73903d476",
   "lastOpenFiles": [
-    "Sin nombre",
     "APUNTES RECUPERACIÓN.md",
-    "Bienvenido.md"
+    "HOLA.md",
+    "Bienvenido.md",
+    "Sin nombre"
   ]
 }
