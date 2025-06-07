@@ -542,3 +542,21 @@ En kilobytes per segon (KB/s): 41.66 * 1024 ≈ 42666 KB/s
 ~ 42000 KB/s de pujada (ample_pujada) ~ 42000 KB/s de baixada (ample_baixada)
 ```
 
+```bash
+a2enmod rewrite
+systemctl restart apache2
+```
+
+```bash
+tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
+<VirtualHost *:80>
+    ServerName www.alma.cat
+    ServerAdmin admin@alma.cat
+    DocumentRoot /var/www/www
+    CustomLog /var/log/apache2/www.alma.cat-access_log combined
+    ErrorLog /var/log/apache2/www.alma.cat-error_log
+    RewriteEngine on
+    RewriteRule ^/login/
+</VirtualHost>
+EOF
+```
