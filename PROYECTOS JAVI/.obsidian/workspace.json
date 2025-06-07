@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "APUNTES RECUPERACIÓN.md",
+                "file": "HOLA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "APUNTES RECUPERACIÓN"
+              "title": "HOLA"
             }
           }
         ]
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "APUNTES RECUPERACIÓN.md",
+                "file": "HOLA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de APUNTES RECUPERACIÓN"
+              "title": "Enlaces entrantes de HOLA"
             }
           },
           {
@@ -133,12 +133,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "APUNTES RECUPERACIÓN.md",
+                "file": "HOLA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de APUNTES RECUPERACIÓN"
+              "title": "Enlaces salientes de HOLA"
             }
           },
           {
@@ -162,13 +162,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "APUNTES RECUPERACIÓN.md",
+                "file": "HOLA.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de APUNTES RECUPERACIÓN"
+              "title": "Esquema de HOLA"
             }
           }
         ],
