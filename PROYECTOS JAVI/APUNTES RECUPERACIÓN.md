@@ -618,7 +618,7 @@ tee /etc/apache2/sites-available/vendes.alma.cat.conf > /dev/null <<EOF
     CustomLog /var/log/apache2/vendes.alma.cat-access_log combined
     ErrorLog /var/log/apache2/vendes.alma.cat-error_log
     RewriteEngine on
-    RewriteRule ^(BMW|AUDI|MERCEDES)/(HIBRIDO|GASOLINA|ELECTRICO)/(ECONOMICO|PREMIUM)/?$ /index.php?marca=$1&combustible=$2&precio=$3 [NC]
+    RewriteRule ^/(BMW|AUDI|MERCEDES)/(HIBRIDO|GASOLINA|ELECTRICO)/(ECONOMICO|PREMIUM)/?$ /index.php?marca=$1&combustible=$2&precio=$3 [NC]
 </VirtualHost>
 
 EOF
@@ -628,9 +628,13 @@ EOF
 ```bash
 sudo tee /var/www/vendes/index.php > /dev/null <<EOF
 <?php
-echo 'Marca: ' . htmlspecialchars($_GET['marca'] ?? '') . '<br>';
-echo 'Combustible: ' . htmlspecialchars($_GET['combustible'] ?? '') . '<br>';
-echo 'Preu: ' . htmlspecialchars($_GET['precio'] ?? '');
+$marca = isset($_GET['marca']) ? (is_array($_GET['marca']) ? $_GET['marca'][0] : $_GET['marca']) : '';
+$combustible = isset($_GET['combustible']) ? (is_array($_GET['combustible']) ? $_GET['combustible'][0] : $_GET['combustible']) : '';
+$precio = isset($_GET['precio']) ? (is_array($_GET['precio']) ? $_GET['precio'][0] : $_GET['precio']) : '';
+
+echo 'Marca: ' . htmlspecialchars($marca) . '<br>';
+echo 'Combustible: ' . htmlspecialchars($combustible) . '<br>';
+echo 'Preu: ' . htmlspecialchars($precio);
 ?>
 EOF
 ```
