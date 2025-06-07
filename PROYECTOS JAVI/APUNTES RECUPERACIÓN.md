@@ -587,7 +587,7 @@ echo "<?php echo 'Benvingut a la WEB de l\'empresa VALIDACIO'; ?>" | sudo tee /v
 
 ## Redireccionamiento
 ```bash
-mkdir -p /var/www/admin/planell/default.php
+mkdir -p /var/www/admin/planell
 echo "<?php echo 'Benvingut a la WEB de l\'empresa DEFAULT'; ?>" | sudo tee /var/www/admin/planell/default.php
 
 tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
