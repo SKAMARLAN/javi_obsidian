@@ -131,6 +131,7 @@ tee /etc/bind/zona_inversa.db > /dev/null <<EOF
                           86400 )       ; Negative Cache TTL
 ;
 @       IN      NS      dns.alma.cat.
+21      IN      PTR     alma.cat.
 21      IN      PTR     ordenador.alma.cat.
 21      IN      PTR     vendes.alma.cat.
 21      IN      PTR     www.alma.cat.
@@ -186,28 +187,28 @@ apt install isc-dhcp-server -y
 ``` bash
 tee /etc/dhcp/dhcpd.conf > /dev/null <<EOF
 option domain-name-servers 192.168.110.61;
-option domain-name "ribetown.cat";
+option domain-name "alma.cat";
 option subnet-mask 255.255.255.0;
 default-lease-time 600;
 max-lease-time 7200;
 
 subnet 192.168.110.0 netmask 255.255.255.0 {
-    range 192.168.110.100 192.168.110.249;
+    range 192.168.110.30 192.168.110.179;
     option routers 192.168.110.1;
     option broadcast-address 192.168.110.255;
-    option domain-name-servers 192.168.110.61;
+    option domain-name-servers 192.168.110.21;
     default-lease-time 6000;
 }
 
 host client1 {
     hardware ethernet 08:00:27:f9:21:14;         # MAC del client 1
-    fixed-address 192.168.110.60;               # IP fixa reservada per client 1
+    fixed-address 192.168.110.200;               # IP fixa reservada per client 1
     option host-name "client1";
 }
 
 host client2 {
     hardware ethernet 00:aa:bb:cc:dd:ee;         # MAC del client 2 
-    fixed-address 192.168.110.59;               # IP fixa reservada per client 2
+    fixed-address 192.168.110.201;               # IP fixa reservada per client 2
     option host-name "client2";
 }
 EOF
@@ -226,65 +227,65 @@ systemctl restart apache2
 ```
 
 ```bash
-sudo mkdir -p /var/www/vendes.ribetown.cat
-sudo mkdir -p /var/www/www.ribetown.cat
-sudo mkdir -p /var/www/admin.ribetown.cat
+sudo mkdir -p /var/www/vendes.alma.cat
+sudo mkdir -p /var/www/www.alma.cat
+sudo mkdir -p /var/www/admin.alma.cat
 ```
 
 ```bash
-echo "<?php echo 'Benvingut a la web de VENDES'; ?>" | sudo tee /var/www/vendes.ribetown.cat/index.php
-echo "<?php echo 'Benvingut a la WEB de l\'empresa'; ?>" | sudo tee /var/www/www.ribetown.cat/index.php
-echo "<?php echo 'Benvingut a la zona ADMIN'; ?>" | sudo tee /var/www/admin.ribetown.cat/index.php
+echo "<?php echo 'Benvingut a la web de VENDES'; ?>" | sudo tee /var/www/vendes.alma.cat/index.php
+echo "<?php echo 'Benvingut a la WEB de l\'empresa'; ?>" | sudo tee /var/www/www.alma.cat/index.php
+echo "<?php echo 'Benvingut a la zona ADMIN'; ?>" | sudo tee /var/www/admin.alma.cat/index.php
 ```
 
 ```bash
-tee /etc/apache2/sites-available/vendes.ribetown.cat.conf > /dev/null <<EOF
+tee /etc/apache2/sites-available/vendes.alma.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
-    ServerName vendes.ribetown.cat
-    ServerAdmin admin@ribetown.cat
-    DocumentRoot /var/www/vendes.ribetown.cat
-    CustomLog /var/log/apache2/vendes.ribetown.cat-access_log combined
-    ErrorLog /var/log/apache2/vendes.ribetown.cat-error_log
+    ServerName vendes.alma.cat
+    ServerAdmin admin@alma.cat
+    DocumentRoot /var/www/vendes.alma.cat
+    CustomLog /var/log/apache2/vendes.alma.cat-access_log combined
+    ErrorLog /var/log/apache2/vendes.alma.cat-error_log
 </VirtualHost>
 EOF
 ```
 
 ```bash
-tee /etc/apache2/sites-available/www.ribetown.cat.conf > /dev/null <<EOF
+tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
-    ServerName www.ribetown.cat
-    ServerAdmin admin@ribetown.cat
-    DocumentRoot /var/www/www.ribetown.cat
-    CustomLog /var/log/apache2/www.ribetown.cat-access_log combined
-    ErrorLog /var/log/apache2/www.ribetown.cat-error_log
+    ServerName www.alma.cat
+    ServerAdmin admin@alma.cat
+    DocumentRoot /var/www/www.alma.cat
+    CustomLog /var/log/apache2/www.alma.cat-access_log combined
+    ErrorLog /var/log/apache2/www.alma.cat-error_log
 </VirtualHost>
 EOF
 ```
 
 ```bash
-tee /etc/apache2/sites-available/admin.ribetown.cat.conf > /dev/null <<EOF
+tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
-    ServerName admin.ribetown.cat
-    ServerAdmin admin@ribetown.cat
-    DocumentRoot /var/www/admin.ribetown.cat
-    CustomLog /var/log/apache2/admin.ribetown.cat-access_log combined
-    ErrorLog /var/log/apache2/admin.ribetown.cat-error_log
+    ServerName admin.alma.cat
+    ServerAdmin admin@alma.cat
+    DocumentRoot /var/www/admin.alma.cat
+    CustomLog /var/log/apache2/admin.alma.cat-access_log combined
+    ErrorLog /var/log/apache2/admin.alma.cat-error_log
 </VirtualHost>
 EOF
 ```
 
 ```bash
-a2ensite vendes.ribetown.cat.conf
-a2ensite www.ribetown.cat.conf
-a2ensite admin.ribetown.cat.conf
+a2ensite vendes.alma.cat.conf
+a2ensite www.alma.cat.conf
+a2ensite admin.alma.cat.conf
 a2dissite 000-default.conf
 systemctl restart apache2
 ```
 
 ```
-http://www.ribetown.cat/
-http://admin.ribetown.cat/
-http://vendes.ribetown.cat/
+http://www.alma.cat/
+http://admin.alma.cat/
+http://vendes.alma.cat/
 ```
 
 # MARIADB PURE-FTPD-MYSQL
