@@ -11,14 +11,14 @@
             "id": "7c11fd30492fc1d0",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "PROYECTOS JAVI/APUNTES RECUPERACIÓN.md",
-                "bFile": "PROYECTOS JAVI/APUNTES RECUPERACIÓN.md",
-                "aRef": ""
+                "file": "APUNTES RECUPERACIÓN.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: APUNTES RECUPERACIÓN"
+              "icon": "lucide-file",
+              "title": "APUNTES RECUPERACIÓN"
             }
           }
         ]
