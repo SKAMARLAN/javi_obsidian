@@ -303,11 +303,6 @@ contrasenya
 ```
 
 ```bash
-ALTER USER 'usuariftp'@'localhost' IDENTIFIED BY 'contrasenya';
-FLUSH PRIVILEGES;
-```
-
-```bash
 nano /etc/mysql/mariadb.conf.d/50-server.cnf
 
 # Comentamos la linea bind_address
