@@ -618,7 +618,7 @@ tee /etc/apache2/sites-available/vendes.alma.cat.conf > /dev/null <<EOF
     CustomLog /var/log/apache2/vendes.alma.cat-access_log combined
     ErrorLog /var/log/apache2/vendes.alma.cat-error_log
     RewriteEngine on
-    RewriteRule ^/(BMW|AUDI|MERCEDES)/(HIBRIDO|GASOLINA|ELECTRICO)/(ECONOMICO|PREMIUM)/?$ /index.php?marca=$1&combustible=$2&precio=$3 [NC]
+    RewriteRule ^(BMW|AUDI|MERCEDES)/(HIBRIDO|GASOLINA|ELECTRICO)/(ECONOMICO|PREMIUM)/?$ /index.php?marca=$1&combustible=$2&precio=$3 [NC]
 </VirtualHost>
 
 EOF
