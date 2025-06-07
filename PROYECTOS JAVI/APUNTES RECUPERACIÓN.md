@@ -577,7 +577,7 @@ tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
     CustomLog /var/log/apache2/www.alma.cat-access_log combined
     ErrorLog /var/log/apache2/www.alma.cat-error_log
     RewriteEngine on
-    RewriteCond %{TIME_DAY} ^5$
+    RewriteCond %{TIME_WDAY} ^5$
     RewriteRule ^/index.php$ /divendres.php
 </VirtualHost>
 EOF
