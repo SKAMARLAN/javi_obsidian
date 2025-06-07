@@ -597,8 +597,8 @@ tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
     DocumentRoot /var/www/admin
     CustomLog /var/log/apache2/admin.alma.cat-access_log combined
     ErrorLog /var/log/apache2/admin.alma.cat-error_log
-    RewriteEngine on
-    RewriteRule ^/planelldecontrol$ /planell/default.php
+    RewriteEngine On
+    RewriteRule ^planelldecontrol$ /planell/default.php [R=302,L]
 </VirtualHost>
 EOF
 
