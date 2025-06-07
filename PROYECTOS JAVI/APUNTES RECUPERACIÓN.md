@@ -598,8 +598,9 @@ tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
     CustomLog /var/log/apache2/admin.alma.cat-access_log combined
     ErrorLog /var/log/apache2/admin.alma.cat-error_log
     RewriteEngine On
-    RewriteRule ^planelldecontrol/?$ /planell/default.php [L]
+    RewriteRule ^/planelldecontrol/?$ /planell/default.php [L]
 
 </VirtualHost>
 EOF
 ```
+![[Pasted image 20250607184619.png]]
