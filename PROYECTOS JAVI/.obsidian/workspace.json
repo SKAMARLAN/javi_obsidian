@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "736055ec01332007",
+        "id": "a7377e4a7617c06c",
         "type": "tabs",
         "children": [
           {
-            "id": "7c11fd30492fc1d0",
+            "id": "b9d894a73903d476",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "PROYECTOS JAVI/.obsidian/workspace.json",
-                "bFile": "PROYECTOS JAVI/.obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -188,8 +184,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7c11fd30492fc1d0",
+  "active": "53e32d79bd716bf3",
   "lastOpenFiles": [
+    "Sin nombre",
     "APUNTES RECUPERACIÓN.md",
     "Bienvenido.md"
   ]
