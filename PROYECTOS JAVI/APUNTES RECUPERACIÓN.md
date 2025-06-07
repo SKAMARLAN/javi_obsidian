@@ -70,7 +70,7 @@ tee /etc/bind/named.conf.local > /dev/null <<EOF
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "ribetown.cat" {
+zone "alma.cat" {
         type master;
         file "/etc/bind/zona_directa.db";
 };
@@ -94,20 +94,20 @@ tee /etc/bind/zona_directa.db > /dev/null <<EOF
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 \$TTL    86400
-@       IN      SOA     ribetown.cat. root.ribetown.cat. (
+@       IN      SOA     alma.cat. root.alma.cat. (
                               1         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                           86400 )       ; Negative Cache TTL
 ;
-@       IN      NS      dns.ribetown.cat.
-@       IN      A       192.168.110.61
-alma    IN      A       192.168.110.61
-dns     IN      A       192.168.110.61
-www     IN      A       192.168.110.61
-admin   IN      A       192.168.110.61
-vendes  IN      A       192.168.110.61
+@          IN      NS      dns.alma.cat.
+@          IN      A       192.168.110.21
+ordenador  IN      A       192.168.110.21
+dns        IN      A       192.168.110.21
+www        IN      A       192.168.110.21
+admin      IN      A       192.168.110.21
+vendes     IN      A       192.168.110.21
 EOF
 ```
 
@@ -123,18 +123,18 @@ tee /etc/bind/zona_inversa.db > /dev/null <<EOF
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 \$TTL    86400
-@       IN      SOA     ribetown.cat. root.ribetown.cat. (
+@       IN      SOA     alma.cat. root.alma.cat. (
                               1         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                           86400 )       ; Negative Cache TTL
 ;
-@       IN      NS      dns.ribetown.cat.
-61      IN      PTR     alma.ribetown.cat.
-61      IN      PTR     vendes.ribetown.cat.
-61      IN      PTR     www.ribetown.cat.
-61      IN      PTR     admin.ribetown.cat.
+@       IN      NS      dns.alma.cat.
+21      IN      PTR     ordenador.alma.cat.
+21      IN      PTR     vendes.alma.cat.
+21      IN      PTR     www.alma.cat.
+21      IN      PTR     admin.alma.cat.
 EOF
 ```
 
