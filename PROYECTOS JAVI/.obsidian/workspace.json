@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HOLA.md",
+                "file": "APUNTES RECUPERACIÓN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HOLA"
+              "title": "APUNTES RECUPERACIÓN"
             }
           }
         ]
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HOLA.md",
+                "file": "APUNTES RECUPERACIÓN.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de HOLA"
+              "title": "Enlaces entrantes de APUNTES RECUPERACIÓN"
             }
           },
           {
@@ -133,12 +133,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "HOLA.md",
+                "file": "APUNTES RECUPERACIÓN.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de HOLA"
+              "title": "Enlaces salientes de APUNTES RECUPERACIÓN"
             }
           },
           {
@@ -162,13 +162,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "HOLA.md",
+                "file": "APUNTES RECUPERACIÓN.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de HOLA"
+              "title": "Esquema de APUNTES RECUPERACIÓN"
             }
           }
         ],
@@ -193,8 +193,8 @@
   },
   "active": "b9d894a73903d476",
   "lastOpenFiles": [
-    "APUNTES RECUPERACIÓN.md",
     "HOLA.md",
+    "APUNTES RECUPERACIÓN.md",
     "Bienvenido.md",
     "Sin nombre"
   ]
