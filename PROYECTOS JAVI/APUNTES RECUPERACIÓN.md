@@ -547,6 +547,8 @@ a2enmod rewrite
 systemctl restart apache2
 ```
 
+
+## Substituir
 ```bash
 tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
@@ -561,5 +563,5 @@ tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
 EOF
 
 mkdir /var/www/www/validacio
-echo "<?php echo 'Benvingut a la WEB de l\'empresa' (VALIDACIO); ?>" | sudo tee /var/www/www/validacio/index.php
+echo "<?php echo 'Benvingut a la WEB de l\'empresa VALIDACIO'; ?>" | sudo tee /var/www/www/validacio/index.php
 ```
