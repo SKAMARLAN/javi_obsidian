@@ -577,9 +577,29 @@ tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
     CustomLog /var/log/apache2/www.alma.cat-access_log combined
     ErrorLog /var/log/apache2/www.alma.cat-error_log
     RewriteEngine on
-    RewriteCond %{TIME_WDAY} ^5$
+    RewriteCond %{TIME_WDAY} ^6$
     RewriteRule ^/index.php$ /divendres.php
 </VirtualHost>
 EOF
 echo "<?php echo 'Benvingut a la WEB de l\'empresa VALIDACIO'; ?>" | sudo tee /var/www/www/divendres.php
+```
+![[Pasted image 20250607181350.png]]
+
+## Redireccionamiento
+```bash
+mkdir -p /var/www/admin/planell/default.php
+echo "<?php echo 'Benvingut a la WEB de l\'empresa DEFAULT'; ?>" | sudo tee /var/www/admin/planell/default.php
+
+tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
+<VirtualHost *:80>
+    ServerName admin.alma.cat
+    ServerAdmin admin@alma.cat
+    DocumentRoot /var/www/admin
+    CustomLog /var/log/apache2/admin.alma.cat-access_log combined
+    ErrorLog /var/log/apache2/admin.alma.cat-error_log
+    RewriteEngine on
+    RewriteRule ^/planelldecontrol$ /planell/default.php
+</VirtualHost>
+EOF
+
 ```
