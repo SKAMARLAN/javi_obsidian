@@ -604,3 +604,4 @@ tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
 EOF
 ```
 ![[Pasted image 20250607184619.png]]
+
