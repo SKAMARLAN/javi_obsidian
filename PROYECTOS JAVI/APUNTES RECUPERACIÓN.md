@@ -597,11 +597,37 @@ tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
     DocumentRoot /var/www/admin
     CustomLog /var/log/apache2/admin.alma.cat-access_log combined
     ErrorLog /var/log/apache2/admin.alma.cat-error_log
-    RewriteEngine On
-    RewriteRule ^/planelldecontrol/?$ /planell/default.php [L]
+    #Redirigir solo contenido manteniendo URL
+    #RewriteEngine On
+    #RewriteRule ^/planelldecontrol/?$ /planell/default.php
+    #Redirigir URL
+    Redirect /planelldecontrol /planell/default.php
 
 </VirtualHost>
 EOF
 ```
 ![[Pasted image 20250607184619.png]]
 
+## Multiples opciones con variables
+```bash
+mkdir -p /var/www/admin/planell
+echo "<?php echo 'Benvingut a la WEB de l\'empresa DEFAULT'; ?>" | sudo tee /var/www/admin/planell/default.php
+
+tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
+<VirtualHost *:80>
+    ServerName admin.alma.cat
+    ServerAdmin admin@alma.cat
+    DocumentRoot /var/www/admin
+    CustomLog /var/log/apache2/admin.alma.cat-access_log combined
+    ErrorLog /var/log/apache2/admin.alma.cat-error_log
+    #Redirigir solo contenido manteniendo URL
+    #RewriteEngine On
+    #RewriteRule ^/planelldecontrol/?$ /planell/default.php
+    #Redirigir URL
+    Redirect /planelldecontrol /planell/default.php
+
+</VirtualHost>
+EOF
+```
+RewriteEngine on
+RewriteRule ^/(BMW|AUDI|MERCEDES)/(HIBRIDO|GASOLINA|ELECTRICO)/(ECONOMICO|PREMIUM)/?$ /index.php?marca=$1&combustible=$2&precio=$3
