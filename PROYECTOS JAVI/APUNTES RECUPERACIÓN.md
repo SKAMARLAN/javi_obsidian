@@ -608,7 +608,7 @@ EOF
 ```
 ![[Pasted image 20250607184619.png]]
 
-## Multiples opciones con variables
+## Multiples opciones con variables HOLA
 ```bash
 tee /etc/apache2/sites-available/vendes.alma.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
