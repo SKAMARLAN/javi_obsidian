@@ -618,23 +618,22 @@ tee /etc/apache2/sites-available/vendes.alma.cat.conf > /dev/null <<EOF
     CustomLog /var/log/apache2/vendes.alma.cat-access_log combined
     ErrorLog /var/log/apache2/vendes.alma.cat-error_log
     RewriteEngine on
-	RewriteRule ^/(BMW|AUDI|MERCEDES)/(HIBRIDO|GASOLINA|ELECTRICO)/(ECONOMICO|PREMIUM)/?$ /index.php?marca=$1&combustible=$2&precio=$3 [NC]
+	RewriteRule ^/(rojo|verde|azul)/(viento|agua|fuego)/(fuerte|flojo)/?$ /index.php?color=$1&elemento=$2&fuerza=$3 [NC]
 </VirtualHost>
 EOF
 ```
 
-
 ```bash
 sudo tee /var/www/vendes/index.php > /dev/null <<EOF
 <?php
-echo "ESTOY AQUÍ<br>";
-function limpiar($param) {
-    return is_string($param) ? htmlspecialchars($param) : '';
-}
-
-echo 'Marca: ' . limpiar($_GET['marca'] ?? '') . '<br>';
-echo 'Combustible: ' . limpiar($_GET['combustible'] ?? '') . '<br>';
-echo 'Preu: ' . limpiar($_GET['precio'] ?? '') . '<br>';
+$color = $_GET['color'];
+$elemento = $_GET['elemento'];
+$fuerza = $_GET['fuerza'];
+	echo "<h1>Color: $color</h1>";
+	echo "<h1>Elemento: $elemento</h1>";
+	echo "<h1>Fuerza: $fuerza</h1>";
 ?>
 EOF
 ```
+
+## 
