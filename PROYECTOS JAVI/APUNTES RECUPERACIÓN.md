@@ -70,7 +70,7 @@ tee /etc/bind/named.conf.local > /dev/null <<EOF
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "alma.cat" {
+zone "habi.cat" {
         type master;
         file "/etc/bind/zona_directa.db";
 };
@@ -94,16 +94,16 @@ tee /etc/bind/zona_directa.db > /dev/null <<EOF
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 \$TTL    86400
-@       IN      SOA     alma.cat. root.alma.cat. (
+@       IN      SOA     habi.cat. root.habi.cat. (
                               1         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                           86400 )       ; Negative Cache TTL
 ;
-@          IN      NS      dns.alma.cat.
+@          IN      NS      dns.habi.cat.
 @          IN      A       192.168.110.21
-ordenador  IN      A       192.168.110.21
+pa         IN      A       192.168.110.21
 dns        IN      A       192.168.110.21
 www        IN      A       192.168.110.21
 admin      IN      A       192.168.110.21
@@ -123,19 +123,19 @@ tee /etc/bind/zona_inversa.db > /dev/null <<EOF
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 \$TTL    86400
-@       IN      SOA     alma.cat. root.alma.cat. (
+@       IN      SOA     habi.cat. root.habi.cat. (
                               1         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                           86400 )       ; Negative Cache TTL
 ;
-@       IN      NS      dns.alma.cat.
-21      IN      PTR     alma.cat.
-21      IN      PTR     ordenador.alma.cat.
-21      IN      PTR     vendes.alma.cat.
-21      IN      PTR     www.alma.cat.
-21      IN      PTR     admin.alma.cat.
+@       IN      NS      dns.habi.cat.
+21      IN      PTR     habi.cat.
+21      IN      PTR     pa.habi.cat.
+21      IN      PTR     vendes.habi.cat.
+21      IN      PTR     www.habi.cat.
+21      IN      PTR     admin.habi.cat.
 EOF
 ```
 
@@ -186,8 +186,8 @@ apt install isc-dhcp-server -y
 
 ``` bash
 tee /etc/dhcp/dhcpd.conf > /dev/null <<EOF
-option domain-name-servers 192.168.110.61;
-option domain-name "alma.cat";
+option domain-name-servers 192.168.110.21;
+option domain-name "habi.cat";
 option subnet-mask 255.255.255.0;
 default-lease-time 600;
 max-lease-time 7200;
