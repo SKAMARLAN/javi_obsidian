@@ -239,45 +239,45 @@ echo "<?php echo 'Benvingut a la zona ADMIN'; ?>" | sudo tee /var/www/admin/inde
 ```
 
 ```bash
-tee /etc/apache2/sites-available/vendes.alma.cat.conf > /dev/null <<EOF
+tee /etc/apache2/sites-available/vendes.habi.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
-    ServerName vendes.alma.cat
-    ServerAdmin admin@alma.cat
+    ServerName vendes.habi.cat
+    ServerAdmin admin@habi.cat
     DocumentRoot /var/www/vendes
-    CustomLog /var/log/apache2/vendes.alma.cat-access_log combined
-    ErrorLog /var/log/apache2/vendes.alma.cat-error_log
+    CustomLog /var/log/apache2/vendes.habi.cat-access_log combined
+    ErrorLog /var/log/apache2/vendes.habi.cat-error_log
 </VirtualHost>
 EOF
 ```
 
 ```bash
-tee /etc/apache2/sites-available/www.alma.cat.conf > /dev/null <<EOF
+tee /etc/apache2/sites-available/www.habi.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
-    ServerName www.alma.cat
-    ServerAdmin admin@alma.cat
+    ServerName www.habi.cat
+    ServerAdmin admin@habi.cat
     DocumentRoot /var/www/www
-    CustomLog /var/log/apache2/www.alma.cat-access_log combined
-    ErrorLog /var/log/apache2/www.alma.cat-error_log
+    CustomLog /var/log/apache2/www.habi.cat-access_log combined
+    ErrorLog /var/log/apache2/www.habi.cat-error_log
 </VirtualHost>
 EOF
 ```
 
 ```bash
-tee /etc/apache2/sites-available/admin.alma.cat.conf > /dev/null <<EOF
+tee /etc/apache2/sites-available/admin.habi.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
-    ServerName admin.alma.cat
-    ServerAdmin admin@alma.cat
+    ServerName admin.habi.cat
+    ServerAdmin admin@habi.cat
     DocumentRoot /var/www/admin
-    CustomLog /var/log/apache2/admin.alma.cat-access_log combined
-    ErrorLog /var/log/apache2/admin.alma.cat-error_log
+    CustomLog /var/log/apache2/admin.habi.cat-access_log combined
+    ErrorLog /var/log/apache2/admin.habi.cat-error_log
 </VirtualHost>
 EOF
 ```
 
 ```bash
-a2ensite vendes.alma.cat.conf
-a2ensite www.alma.cat.conf
-a2ensite admin.alma.cat.conf
+a2ensite vendes.habi.cat.conf
+a2ensite www.habi.cat.conf
+a2ensite admin.habi.cat.conf
 a2dissite 000-default.conf
 systemctl restart apache2
 ```
