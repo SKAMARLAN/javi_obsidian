@@ -506,7 +506,7 @@ INSERT INTO comptes (
     ample_pujada, ample_baixada, comentari, acces_ip, quota_mida, quota_fitxer
 ) VALUES
 (
-    'joan', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$ec7H0s9xd6QIjsDVa5/n5Tp2ydedfgrFtTbJzvAuAwM',
+    'joan', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$QAMKxwHMEtWU0p3AlruLxUTyBZ5gkX0SHI1sYS4fhlo',
     '2001', '2001', '/var/www/joan',
     2001, 2001, 'Usuari Joan', '*', 10000, 500
 );
@@ -516,7 +516,7 @@ INSERT INTO comptes (
     ample_pujada, ample_baixada, comentari, acces_ip, quota_mida, quota_fitxer
 ) VALUES
 (
-    'ramon', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$1WO/P5tnUfsu79vcGuRGFcl7X2R5ReBLaEGdd2Myjh0',
+    'ramon', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$8e5+uHK3ncJS00pLY6yMS91ezeVy+0+fT5L0KTv0e1Q',
     '2001', '2001', '/var/www/ramon',
     2001, 2001, 'Usuari Ramon', '*', 8000, 300
 );
