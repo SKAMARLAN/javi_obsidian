@@ -70,7 +70,7 @@ tee /etc/bind/named.conf.local > /dev/null <<EOF
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "habi.cat" {
+zone "javirec25.cat" {
         type master;
         file "/etc/bind/zona_directa.db";
 };
@@ -94,20 +94,19 @@ tee /etc/bind/zona_directa.db > /dev/null <<EOF
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 \$TTL    86400
-@       IN      SOA     habi.cat. root.habi.cat. (
+@       IN      SOA     javirec25.cat. root.javirec25.cat. (
                               1         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                           86400 )       ; Negative Cache TTL
 ;
-@          IN      NS      dns.habi.cat.
+@          IN      NS      dns.javirec25.cat.
 @          IN      A       192.168.110.21
-pa         IN      A       192.168.110.21
 dns        IN      A       192.168.110.21
-www        IN      A       192.168.110.21
-admin      IN      A       192.168.110.21
-vendes     IN      A       192.168.110.21
+josep      IN      A       192.168.110.21
+joan       IN      A       192.168.110.21
+ramon      IN      A       192.168.110.21
 EOF
 ```
 
@@ -123,19 +122,18 @@ tee /etc/bind/zona_inversa.db > /dev/null <<EOF
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 \$TTL    86400
-@       IN      SOA     habi.cat. root.habi.cat. (
+@       IN      SOA     javirec25.cat. root.javirec25.cat. (
                               1         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                           86400 )       ; Negative Cache TTL
 ;
-@       IN      NS      dns.habi.cat.
-21      IN      PTR     habi.cat.
-21      IN      PTR     pa.habi.cat.
-21      IN      PTR     vendes.habi.cat.
-21      IN      PTR     www.habi.cat.
-21      IN      PTR     admin.habi.cat.
+@       IN      NS      dns.javirec25.cat.
+21      IN      PTR     javirec25.cat.
+21      IN      PTR     josep.javirec25.cat.
+21      IN      PTR     joan.javirec25.cat.
+21      IN      PTR     ramon.javirec25.cat.
 EOF
 ```
 
@@ -227,15 +225,15 @@ systemctl restart apache2
 ```
 
 ```bash
-sudo mkdir -p /var/www/vendes
-sudo mkdir -p /var/www/www
-sudo mkdir -p /var/www/admin
+sudo mkdir -p /var/www/josep
+sudo mkdir -p /var/www/joan
+sudo mkdir -p /var/www/ramon
 ```
 
 ```bash
-echo "<?php echo 'Benvingut a la web de VENDES'; ?>" | sudo tee /var/www/vendes/index.php
-echo "<?php echo 'Benvingut a la WEB de l\'empresa'; ?>" | sudo tee /var/www/www/index.php
-echo "<?php echo 'Benvingut a la zona ADMIN'; ?>" | sudo tee /var/www/admin/index.php
+echo "<?php echo 'Benvingut a la web de JOSEP'; ?>" | sudo tee /var/www/josep/index.php
+echo "<?php echo 'Benvingut a la web de JOAN'; ?>" | sudo tee /var/www/joan/index.php
+echo "<?php echo 'Benvingut a la web de  RAMON'; ?>" | sudo tee /var/www/ramon/index.php
 ```
 
 ```bash
