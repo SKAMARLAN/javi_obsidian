@@ -480,13 +480,13 @@ apt install argon2 -y
 
 echo -n 'josep123' | argon2 somesalt -id -t 2 -m 16 -p 1
 
-$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$Jamu5MWR2rFp4fvNl3DEHre4wlvwyjic/hE2JM/H/Ys
+$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$Yp/LVnljv05SDdzBOGa5IEDn3MHBpQGuAAgtF2lVEJE
 echo -n 'joan123' | argon2 somesalt -id -t 2 -m 16 -p 1
 
-$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$ec7H0s9xd6QIjsDVa5/n5Tp2ydedfgrFtTbJzvAuAwM
+$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$QAMKxwHMEtWU0p3AlruLxUTyBZ5gkX0SHI1sYS4fhlo
 echo -n 'ramon123' | argon2 somesalt -id -t 2 -m 16 -p 1
 
-$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$1WO/P5tnUfsu79vcGuRGFcl7X2R5ReBLaEGdd2Myjh0
+$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$8e5+uHK3ncJS00pLY6yMS91ezeVy+0+fT5L0KTv0e1Q
 ```
 
 ``` sql
@@ -496,7 +496,7 @@ INSERT INTO comptes (
     ample_pujada, ample_baixada, comentari, acces_ip, quota_mida, quota_fitxer
 ) VALUES
 (
-    'josep', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$Jamu5MWR2rFp4fvNl3DEHre4wlvwyjic/hE2JM/H/Ys',
+    'josep', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$Yp/LVnljv05SDdzBOGa5IEDn3MHBpQGuAAgtF2lVEJE',
     '2001', '2001', '/var/www/josep',
     2001, 2001, 'Usuari Josep', '*', 5000, 100
 );
