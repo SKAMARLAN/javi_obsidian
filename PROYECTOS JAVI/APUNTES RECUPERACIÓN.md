@@ -75,7 +75,7 @@ zone "javirec25.cat" {
         file "/etc/bind/zona_directa.db";
 };
 
-zone "110.168.192.in-addr.arpa" {
+zone "1.110.10.in-addr.arpa" {
         type master;
         file "/etc/bind/zona_inversa.db";
 };
@@ -102,11 +102,11 @@ tee /etc/bind/zona_directa.db > /dev/null <<EOF
                           86400 )       ; Negative Cache TTL
 ;
 @          IN      NS      dns.javirec25.cat.
-@          IN      A       192.168.110.21
-dns        IN      A       192.168.110.21
-josep      IN      A       192.168.110.21
-joan       IN      A       192.168.110.21
-ramon      IN      A       192.168.110.21
+@          IN      A       10.110.1.66
+dns        IN      A       10.110.1.66
+josep      IN      A       10.110.1.66
+joan       IN      A       10.110.1.66
+ramon      IN      A       10.110.1.66
 EOF
 ```
 
@@ -130,10 +130,10 @@ tee /etc/bind/zona_inversa.db > /dev/null <<EOF
                           86400 )       ; Negative Cache TTL
 ;
 @       IN      NS      dns.javirec25.cat.
-21      IN      PTR     javirec25.cat.
-21      IN      PTR     josep.javirec25.cat.
-21      IN      PTR     joan.javirec25.cat.
-21      IN      PTR     ramon.javirec25.cat.
+66      IN      PTR     javirec25.cat.
+66      IN      PTR     josep.javirec25.cat.
+66      IN      PTR     joan.javirec25.cat.
+66      IN      PTR     ramon.javirec25.cat.
 EOF
 ```
 
