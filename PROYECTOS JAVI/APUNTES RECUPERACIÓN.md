@@ -6,7 +6,7 @@ network:
         enp0s3:
             dhcp4: no
             addresses:
-              - 192.168.110.21/24
+              - 192.168.110.21/16
             routes:
               - to: default
                 via: 192.168.110.1
