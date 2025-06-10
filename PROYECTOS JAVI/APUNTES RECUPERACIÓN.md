@@ -237,45 +237,45 @@ echo "<?php echo 'Benvingut a la web de  RAMON'; ?>" | sudo tee /var/www/ramon/i
 ```
 
 ```bash
-tee /etc/apache2/sites-available/vendes.habi.cat.conf > /dev/null <<EOF
+tee /etc/apache2/sites-available/josep.javirec25.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
-    ServerName vendes.habi.cat
-    ServerAdmin admin@habi.cat
-    DocumentRoot /var/www/vendes
-    CustomLog /var/log/apache2/vendes.habi.cat-access_log combined
-    ErrorLog /var/log/apache2/vendes.habi.cat-error_log
+    ServerName josep.javirec25.cat
+    ServerAdmin admin@javirec25.cat
+    DocumentRoot /var/www/josep
+    CustomLog /var/log/apache2/josep.javirec25.cat-access_log combined
+    ErrorLog /var/log/apache2/josep.javirec25.cat-error_log
 </VirtualHost>
 EOF
 ```
 
 ```bash
-tee /etc/apache2/sites-available/www.habi.cat.conf > /dev/null <<EOF
+tee /etc/apache2/sites-available/joan.javirec25.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
-    ServerName www.habi.cat
-    ServerAdmin admin@habi.cat
-    DocumentRoot /var/www/www
-    CustomLog /var/log/apache2/www.habi.cat-access_log combined
-    ErrorLog /var/log/apache2/www.habi.cat-error_log
+    ServerName joan.javirec25.cat
+    ServerAdmin admin@javirec25.cat
+    DocumentRoot /var/www/joan
+    CustomLog /var/log/apache2/joan.javirec25.cat-access_log combined
+    ErrorLog /var/log/apache2/joan.javirec25.cat-error_log
 </VirtualHost>
 EOF
 ```
 
 ```bash
-tee /etc/apache2/sites-available/admin.habi.cat.conf > /dev/null <<EOF
+tee /etc/apache2/sites-available/ramon.javirec25.cat.conf > /dev/null <<EOF
 <VirtualHost *:80>
-    ServerName admin.habi.cat
-    ServerAdmin admin@habi.cat
-    DocumentRoot /var/www/admin
-    CustomLog /var/log/apache2/admin.habi.cat-access_log combined
-    ErrorLog /var/log/apache2/admin.habi.cat-error_log
+    ServerName ramon.javirec25.cat
+    ServerAdmin admin@javirec25.cat
+    DocumentRoot /var/www/ramon
+    CustomLog /var/log/apache2/ramon.javirec25.cat-access_log combined
+    ErrorLog /var/log/apache2/ramon.javirec25.cat-error_log
 </VirtualHost>
 EOF
 ```
 
 ```bash
-a2ensite vendes.habi.cat.conf
-a2ensite www.habi.cat.conf
-a2ensite admin.habi.cat.conf
+a2ensite josep.javirec25.cat.conf
+a2ensite joan.javirec25.cat.conf
+a2ensite ramon.javirec25.cat.conf
 a2dissite 000-default.conf
 systemctl restart apache2
 ```
@@ -478,13 +478,13 @@ service pure-ftpd-mysql restart
 ``` bash
 apt install argon2 -y
 
-echo -n 'vendes123' | argon2 somesalt -id -t 2 -m 16 -p 1
+echo -n 'josep123' | argon2 somesalt -id -t 2 -m 16 -p 1
 
 $argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$Jamu5MWR2rFp4fvNl3DEHre4wlvwyjic/hE2JM/H/Ys
-echo -n 'admin123' | argon2 somesalt -id -t 2 -m 16 -p 1
+echo -n 'joan123' | argon2 somesalt -id -t 2 -m 16 -p 1
 
 $argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$ec7H0s9xd6QIjsDVa5/n5Tp2ydedfgrFtTbJzvAuAwM
-echo -n 'www123' | argon2 somesalt -id -t 2 -m 16 -p 1
+echo -n 'ramon123' | argon2 somesalt -id -t 2 -m 16 -p 1
 
 $argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$1WO/P5tnUfsu79vcGuRGFcl7X2R5ReBLaEGdd2Myjh0
 ```
@@ -496,9 +496,9 @@ INSERT INTO comptes (
     ample_pujada, ample_baixada, comentari, acces_ip, quota_mida, quota_fitxer
 ) VALUES
 (
-    'vendes', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$Jamu5MWR2rFp4fvNl3DEHre4wlvwyjic/hE2JM/H/Ys',
-    '2001', '2001', '/var/www/vendes',
-    2001, 2001, 'Usuari de vendes', '*', 5000, 100
+    'josep', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$Jamu5MWR2rFp4fvNl3DEHre4wlvwyjic/hE2JM/H/Ys',
+    '2001', '2001', '/var/www/josep',
+    2001, 2001, 'Usuari Josep', '*', 5000, 100
 );
 
 INSERT INTO comptes (
@@ -506,9 +506,9 @@ INSERT INTO comptes (
     ample_pujada, ample_baixada, comentari, acces_ip, quota_mida, quota_fitxer
 ) VALUES
 (
-    'admin', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$ec7H0s9xd6QIjsDVa5/n5Tp2ydedfgrFtTbJzvAuAwM',
-    '2001', '2001', '/var/www/admin',
-    2001, 2001, 'Administrador FTP', '*', 10000, 500
+    'joan', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$ec7H0s9xd6QIjsDVa5/n5Tp2ydedfgrFtTbJzvAuAwM',
+    '2001', '2001', '/var/www/joan',
+    2001, 2001, 'Usuari Joan', '*', 10000, 500
 );
 
 INSERT INTO comptes (
@@ -516,9 +516,9 @@ INSERT INTO comptes (
     ample_pujada, ample_baixada, comentari, acces_ip, quota_mida, quota_fitxer
 ) VALUES
 (
-    'www', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$1WO/P5tnUfsu79vcGuRGFcl7X2R5ReBLaEGdd2Myjh0',
-    '2001', '2001', '/var/www/www',
-    2001, 2001, 'Usuari per contingut web', '*', 8000, 300
+    'ramon', 1, '$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ$1WO/P5tnUfsu79vcGuRGFcl7X2R5ReBLaEGdd2Myjh0',
+    '2001', '2001', '/var/www/ramon',
+    2001, 2001, 'Usuari Ramon', '*', 8000, 300
 );
 ```
 
