@@ -109,7 +109,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
+                "useHierarchy": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -143,7 +143,7 @@
               "type": "outline",
               "state": {
                 "file": "PROYECTOS JAVI/APUNTES RECUPERACIÓN.md",
-                "followCursor": false,
+                "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -169,6 +169,6 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "f770acf18ac379cc",
+  "active": "3d5d3764ff34956e",
   "lastOpenFiles": []
 }
