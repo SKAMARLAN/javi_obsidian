@@ -11,14 +11,12 @@
             "id": "f770acf18ac379cc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "PROYECTOS JAVI/APUNTES RECUPERACIÓN.md",
-                "mode": "source",
-                "source": false
+                "file": "PROYECTOS JAVI/EXAMEN RECUPERACIÓN/Pasted image 20250607184619.png"
               },
-              "icon": "lucide-file",
-              "title": "APUNTES RECUPERACIÓN"
+              "icon": "lucide-image",
+              "title": "Pasted image 20250607184619"
             }
           }
         ]
@@ -142,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PROYECTOS JAVI/APUNTES RECUPERACIÓN.md",
+                "file": "PROYECTOS JAVI/EXAMEN RECUPERACIÓN/Pasted image 20250607184619.png",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de APUNTES RECUPERACIÓN"
+              "title": "Esquema de Pasted image 20250607184619"
             }
           }
         ],
@@ -169,6 +167,9 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "3d5d3764ff34956e",
-  "lastOpenFiles": []
+  "active": "9c7183e7d09a77d5",
+  "lastOpenFiles": [
+    "PROYECTOS JAVI/EXAMEN RECUPERACIÓN/APUNTES RECUPERACIÓN.md",
+    "PROYECTOS JAVI/EXAMEN RECUPERACIÓN"
+  ]
 }
