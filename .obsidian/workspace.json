@@ -11,12 +11,14 @@
             "id": "f770acf18ac379cc",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "PROYECTOS JAVI/EXAMEN RECUPERACIÓN/Pasted image 20250607184619.png"
+                "file": "PROYECTOS JAVI/PostgreSQL/Fundamentos.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250607184619"
+              "icon": "lucide-file",
+              "title": "Fundamentos"
             }
           }
         ]
@@ -140,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PROYECTOS JAVI/EXAMEN RECUPERACIÓN/Pasted image 20250607184619.png",
+                "file": "PROYECTOS JAVI/PostgreSQL/Fundamentos.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Pasted image 20250607184619"
+              "title": "Esquema de Fundamentos"
             }
           }
         ],
@@ -167,8 +169,12 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "9c7183e7d09a77d5",
+  "active": "f770acf18ac379cc",
   "lastOpenFiles": [
+    "PROYECTOS JAVI/PostgreSQL.md",
+    "PROYECTOS JAVI/PostgreSQL/Fundamentos.md",
+    "PROYECTOS JAVI/PostgreSQL",
+    "PROYECTOS JAVI/EXAMEN RECUPERACIÓN/Pasted image 20250607184619.png",
     "PROYECTOS JAVI/EXAMEN RECUPERACIÓN/APUNTES RECUPERACIÓN.md",
     "PROYECTOS JAVI/EXAMEN RECUPERACIÓN"
   ]
